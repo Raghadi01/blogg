@@ -1,0 +1,63 @@
+ {% extends 'base.html' %}
+
+
+
+{% block content  %}
+
+
+    <style>
+
+  input,select,textarea{
+                width: 100%;
+                padding: 10px;
+                border-radius: 5px;
+                margin: 10px 5px;
+
+            }
+            input[type=submit]{
+                width: 40%;
+                background-color: bisque;
+                color: black;
+                padding: 12px 20px;
+                font-weight: bold;
+
+
+            }
+            input[type=submit]:hover{
+                background-color: lightslategray;
+            }
+        .container{
+            padding: 20px;
+
+
+        }
+        h1{
+            position: relative;
+            top:20px;
+            text-align: center;
+
+        }
+    </style>
+
+ <div class="container">
+
+ <form action="{% url 'contact' %}" method="POST" >
+
+     {% csrf_token %}
+
+
+     <h1>Contact Us</h1>
+     <form><label for="FirstName">First name:</label><input type="text" name="name" size="15" placeholder="Your name...">
+                    <br/><label for="lastName">Email:</label><input type="email" name="email" size="15" placeholder="Your email is.."/><br/>
+         <label for="subject">Subject:</label><input type="text" name="subject" size="15">
+
+
+                  <label for="subject">Your Massage</label><textarea id="subject" name="massage" placeholder="Write something.." >
+                        </textarea><br/>
+                        <input type="submit" value="submit">
+
+     </form></div>
+
+
+
+       {% endblock %}

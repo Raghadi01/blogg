@@ -1,0 +1,40 @@
+ {% extends 'base.html' %}
+{% load static %}
+
+
+{% block content  %}
+
+ <style>
+
+
+
+ img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 500px;
+}
+ section {
+     padding: 100px 200px;
+
+ }
+ </style>
+
+
+   <section>
+
+<img src="{% static 'pexels-photo-378515.jpeg' %}">
+
+
+    <img src="{% static 'pexels-photo-1174132.jpeg' %}">
+
+    <img src="{% static 'pexels-photo-1338187.webp' %}">
+
+   <img src="{% static 'pexels-photo-2085998.jpeg' %}">
+
+
+
+
+</section>
+
+       {% endblock %}

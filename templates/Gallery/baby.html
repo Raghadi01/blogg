@@ -1,0 +1,151 @@
+  {% extends 'base.html' %}
+
+
+
+{% block content  %}
+  <style>
+
+
+  .Projects{
+background-color: rgba(146, 89, 88, 0.929);
+}
+.Projects.content{
+margin: 30px;
+}
+.project-card{
+border: 1px solid white;
+background-color: aliceblue;
+min-height: 14em;
+width: 23em;
+overflow: hidden;
+border-radius: 10px;
+margin: 20px;
+transition: 0.7s ease;
+
+}
+.project-card:hover{
+    transform: scale(1.1);
+}
+.project-card:hover .project-icon{
+    opacity: 0.9;
+}
+
+.project-icon{
+    font-size: 8em;
+}
+.project-info{
+padding: 1em;
+}
+.project-catogory{
+font-size: 0.8em;
+color: black;
+}
+
+.project-title{
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 10px;
+}
+.more-dit{
+    text-decoration: none;
+    color: blue;
+}
+.more-dit:hover{
+    color: blueviolet;
+}
+.contact .icon{
+    font-size: 4.5em;
+}
+.contact .info h3{
+    color: black;
+
+}
+section{
+padding: 100px 200px;
+}
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+.content{
+display: flex;
+justify-content: center;
+flex-direction: row;
+flex-wrap: wrap; /*the size will be constent*/
+}
+.title{
+display: flex;
+justify-content: center;
+color:  rgb(36, 99, 194);
+font-size: 2.2em;
+font-weight: 800;
+margin-bottom: 30px;
+text-transform: uppercase;
+
+}
+
+  </style>
+
+
+
+    <section class="Projects"id="project">
+ <h2 class="title">Projects</h2>
+ <div class="content">
+    <div class="project-card">
+        <div class="project-icon">
+            <i class="fab fa-java"></i>
+        </div>
+        <div class="project-info">
+            <p class="project-catogory">Java project</p>
+            <strong class="project-title">
+                <span>Calcuter </span>
+                <a href="#" class="more-dit">more diatlise</a>
+            </strong>
+        </div>
+    </div>
+    <div class="project-card">
+        <div class="project-icon">
+            <i class="fab fa-python"></i>
+        </div>
+        <div class="project-info">
+            <p class="project-catogory">Java Fundamentala</p>
+            <strong class="project-title">
+                <span>Orcale Academy </span>
+                <a href="#" class="more-dit">certificate</a>
+            </strong>
+        </div>
+    </div>
+    <div class="project-card">
+        <div class="project-icon">
+            <i class="fab fa-java"></i>
+        </div>
+        <div class="project-info">
+            <p class="project-catogory">Python</p>
+            <strong class="project-title">
+                <span>Cisco Networking Academy </span>
+                <a href="raghadmohammed-cs111-certificate.pdf" class="more-dit">certificate</a>
+            </strong>
+        </div>
+    </div>
+    <div class="project-card">
+        <div class="project-icon">
+            <i class="fab fa-java"></i>
+        </div>
+        <div class="project-info">
+            <p class="project-catogory">Java project</p>
+            <strong class="project-title">
+                <span>Calcuter </span>
+                <a href="#" class="more-dit">more diatlise</a>
+            </strong>
+        </div>
+    </div>
+    </div>
+ </section>
+
+
+       {% endblock %}

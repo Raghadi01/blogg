@@ -1,0 +1,51 @@
+  {% extends 'base.html' %}
+
+
+
+{% block content  %}
+
+    <style>
+
+    h1{
+        padding: 25px;
+        position: relative;
+        top:40px;
+        display: flex;
+    justify-content: center;
+     color:  rgb(36, 99, 194);
+    font-size: 2.2em;
+   font-weight: bold;
+    margin-bottom: 30px;
+
+    }
+
+
+    </style>
+    <main class="container">
+  <div class="p-4 p-md-5 mb-4 rounded text-bg-dark">
+    <div class="col-md-6 px-0">
+      <h1 class="display-4 fst-italic">Wellcome To My Blog</h1>
+
+
+    </div>
+  </div>
+        {% for x in post.all  %}
+
+  <div class="row mb-2">
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+
+          <h3 class="mb-0">{{x.title  }}</h3>
+          <div class="mb-1 text-body-secondary">{{ x.date }}</div>
+          <p class="card-text mb-auto">{{x.text }}</p>
+
+        </div>
+
+      </div>
+    </div>
+
+      {% endfor %}
+
+
+       {% endblock %}
